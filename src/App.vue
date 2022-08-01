@@ -1,31 +1,32 @@
 <template>
   <div>
-    <!-- type: primary:粉色，success:绿色-->
-    <!-- round 圆型 -->
-    <!-- disabled 禁用-->
-    <gButton type="primary" btnName="成功按钮" round @click="getType" disabled
-></gButton>
+    <d-progress :percentage="100" :conFontColor="'white'" ></d-progress>
+    <!-- <d-progress :percentage="33" color="orange"></d-progress>
+    <d-progress :percentage="66" status="exception"></d-progress>
+    <d-progress :percentage="100" status="success" ></d-progress> -->
   </div>
 </template>
 
 <script>
-import gButton from './components/changeBtn.vue'
+import dProgress from "./components/progressBar.vue";
 export default {
   data() {
     return {};
   },
-  components:{
-    gButton
+  components: {
+    dProgress,
   },
 
   created() {},
 
-  methods: {
-    getType() {
-      console.log(11);
-    }
-  },
+  methods: {},
 };
 </script>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.progress{
+  width: 200px;
+  height: 30px;
+
+}
+</style>
